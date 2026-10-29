@@ -66,7 +66,7 @@ st.markdown(
         h3 { font-size: 1.05rem !important; }
 
         /* Таблицы: мельче шрифт, чтобы влезало больше колонок */
-        div[data-testid="stDataFrame"] { font-size: 0.82rem; }
+        div[data-testid="stDataFrame"] { font-size: 1.2rem; }
 
         /* Кнопки на всю ширину — удобнее нажимать */
         div[data-testid="stButton"] > button,
@@ -489,18 +489,8 @@ def page_tables() -> None:
         st.dataframe(
             df,
             use_container_width=True,
-            hide_index=True,
-            column_config={
-                "student_id": st.column_config.NumberColumn("ID", width="small"),
-                "teacher_id": st.column_config.NumberColumn("ID", width="small"),
-                "subject_id": st.column_config.NumberColumn("ID", width="small"),
-                "class_id": st.column_config.NumberColumn("Класс", width="small"),
-                "name": st.column_config.TextColumn("ФИО", width="medium"),
-                "grades": st.column_config.NumberColumn("Ср. балл", format="%.2f", width="small"),
-                "grade": st.column_config.NumberColumn("Оценка", width="small"),
-                "cw_grade": st.column_config.NumberColumn("КР", width="small"),
-                "date": st.column_config.DateColumn("Дата", width="small"),
-            },
+            hide_index=True
+
         )
     finally:
         con.close()
