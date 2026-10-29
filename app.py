@@ -57,7 +57,7 @@ st.markdown(
         .block-container {
             padding-left: 0.6rem !important;
             padding-right: 0.6rem !important;
-            padding-top: 0.8rem !important;
+            padding-top: 3rem !important;
         }
 
         /* Заголовки компактнее */
